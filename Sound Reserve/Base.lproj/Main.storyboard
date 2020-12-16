@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="laO-4b-6Nm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="OfD-61-tQT">
+            <objects>
+                <navigationController id="laO-4b-6Nm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RXk-Lw-Esm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Oa-Za-TV8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzF-WH-Ui2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="76"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginVC" customModule="Sound_Reserve" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-EO-9pa">
+                                <rect key="frame" x="84.5" y="405" width="245" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="695-ho-hR6"/>
+                                    <constraint firstAttribute="height" constant="60" id="Tzq-Zf-Uer"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Connect to Spotify">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickSpotify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATA-Bb-G90"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPS-mZ-yqz">
+                                <rect key="frame" x="84.5" y="485" width="245" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="23x-pQ-Cdf"/>
+                                    <constraint firstAttribute="height" constant="60" id="VX7-bn-Rzw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Connect to Apple Music">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6K-8F-cRO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pf7-EO-9pa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="K10-zw-XSu"/>
+                            <constraint firstItem="WPS-mZ-yqz" firstAttribute="centerX" secondItem="Pf7-EO-9pa" secondAttribute="centerX" id="cie-YU-2mQ"/>
+                            <constraint firstItem="WPS-mZ-yqz" firstAttribute="top" secondItem="Pf7-EO-9pa" secondAttribute="bottom" constant="20" id="zaS-e4-bHT"/>
+                            <constraint firstItem="Pf7-EO-9pa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="zhM-zl-ivU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Abd-Rs-crf"/>
+                    <connections>
+                        <outlet property="btnApple" destination="WPS-mZ-yqz" id="fzP-2g-mjE"/>
+                        <outlet property="btnSpotify" destination="Pf7-EO-9pa" id="8Yv-SU-IkU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lDP-et-ybC">
+            <objects>
+                <viewController id="F1V-I2-sMo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5f-cg-Dbn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdH-Md-mRu">
+                                <rect key="frame" x="0.0" y="349.5" width="207" height="207"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-QT-Eah">
+                                        <rect key="frame" x="20.5" y="20.5" width="166" height="166"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Efv-QT-Eah" firstAttribute="centerY" secondItem="kdH-Md-mRu" secondAttribute="centerY" id="9eo-Q6-liB"/>
+                                    <constraint firstItem="Efv-QT-Eah" firstAttribute="height" secondItem="kdH-Md-mRu" secondAttribute="height" multiplier="0.8" id="M8w-bM-VhE"/>
+                                    <constraint firstAttribute="width" secondItem="kdH-Md-mRu" secondAttribute="height" id="MtB-ot-Fd9"/>
+                                    <constraint firstItem="Efv-QT-Eah" firstAttribute="width" secondItem="kdH-Md-mRu" secondAttribute="width" multiplier="0.8" id="fwZ-6t-kAW"/>
+                                    <constraint firstItem="Efv-QT-Eah" firstAttribute="centerX" secondItem="kdH-Md-mRu" secondAttribute="centerX" id="ztG-Wf-lIj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-aW-JZy">
+                                <rect key="frame" x="207" y="349.5" width="207" height="207"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPu-fS-r3A">
+                                        <rect key="frame" x="20.5" y="20.5" width="166" height="166"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="KPu-fS-r3A" firstAttribute="height" secondItem="gLJ-aW-JZy" secondAttribute="height" multiplier="0.8" id="8PU-Ug-gIy"/>
+                                    <constraint firstItem="KPu-fS-r3A" firstAttribute="centerX" secondItem="gLJ-aW-JZy" secondAttribute="centerX" id="hl3-b4-9db"/>
+                                    <constraint firstItem="KPu-fS-r3A" firstAttribute="width" secondItem="gLJ-aW-JZy" secondAttribute="width" multiplier="0.8" id="n7x-br-rst"/>
+                                    <constraint firstItem="KPu-fS-r3A" firstAttribute="centerY" secondItem="gLJ-aW-JZy" secondAttribute="centerY" id="yeg-3w-q7Q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vdq-RG-rmg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kdH-Md-mRu" firstAttribute="centerY" secondItem="vdq-RG-rmg" secondAttribute="centerY" id="CGh-sg-Ib6"/>
+                            <constraint firstItem="gLJ-aW-JZy" firstAttribute="width" secondItem="kdH-Md-mRu" secondAttribute="width" id="PeS-bb-hjZ"/>
+                            <constraint firstItem="gLJ-aW-JZy" firstAttribute="height" secondItem="kdH-Md-mRu" secondAttribute="height" id="UW9-hg-h7k"/>
+                            <constraint firstItem="gLJ-aW-JZy" firstAttribute="leading" secondItem="kdH-Md-mRu" secondAttribute="trailing" id="aH7-fS-koO"/>
+                            <constraint firstItem="gLJ-aW-JZy" firstAttribute="centerY" secondItem="kdH-Md-mRu" secondAttribute="centerY" id="mLF-Wt-740"/>
+                            <constraint firstItem="kdH-Md-mRu" firstAttribute="leading" secondItem="vdq-RG-rmg" secondAttribute="leading" id="tM9-cD-BC9"/>
+                            <constraint firstItem="kdH-Md-mRu" firstAttribute="width" secondItem="i5f-cg-Dbn" secondAttribute="width" multiplier="0.5" id="tUt-AH-hyb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptq-eZ-akw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
